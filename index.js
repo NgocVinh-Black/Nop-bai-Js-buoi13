@@ -2,7 +2,7 @@
 const tien1Ngay = 100000;
 function tinhLuong() {
   var soNgayLam = document.getElementById("txtSoNgayLam").value * 1;
-  console.log(typeof parseInt(soNgayLam));
+  console.log(typeof Number(soNgayLam));
   var tongTien = 0;
   if (soNgayLam >= 0) {
     tongTien = soNgayLam * tien1Ngay;
@@ -44,7 +44,7 @@ document.getElementById("txtTinhTrungBinh").onclick = function () {
 const tien1USD = 23500;
 function tinhTienDoi() {
   var soTienVND = document.getElementById("txtVND").value * 1;
-  console.log(typeof parseInt(soTienVND));
+  console.log(typeof Number(soTienVND));
   var tongTienDoi = 0;
   if (soTienVND >= 0) {
     tongTienDoi = soTienVND * tien1USD;
@@ -76,6 +76,8 @@ document.getElementById("txtDienTich").onclick = function () {
   var ketQuaHCN = 0;
   var chieuDai = returnCD();
   var chieuRong = returnCR();
+  console.log(typeof Number(chieuDai));
+  console.log(typeof Number(chieuRong));
   if (chieuDai >= chieuRong) {
     ketQuaHCN = chieuDai * chieuRong;
   } else {
@@ -89,6 +91,8 @@ document.getElementById("txtChuVi").onclick = function () {
   var ketQuaHCN = 0;
   var chieuDai = returnCD();
   var chieuRong = returnCR();
+  console.log(typeof Number(chieuDai));
+  console.log(typeof Number(chieuRong));
   if (chieuDai >= chieuRong) {
     ketQuaHCN = (chieuDai + chieuRong) / 2;
   } else {
@@ -105,6 +109,7 @@ document.getElementById("txtTongKiSo").onclick = function () {
   var soNhapVao = document.getElementById("txtSoNhapVao").value * 1;
   var soChuc = Math.floor(soNhapVao / 10);
   var soDonVi = Math.floor(soNhapVao % 10);
+  console.log(typeof Number(soNhapVao));
   var tong2Kiso = 0;
   if (soNhapVao < 100) {
     tong2Kiso = soChuc + soDonVi;
