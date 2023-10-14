@@ -94,7 +94,7 @@ document.getElementById("txtChuVi").onclick = function () {
   console.log(typeof Number(chieuDai));
   console.log(typeof Number(chieuRong));
   if (chieuDai >= chieuRong) {
-    ketQuaHCN = (chieuDai + chieuRong) / 2;
+    ketQuaHCN = (chieuDai + chieuRong) * 2;
   } else {
     alert("Nhập lại dữ liệu");
   }
